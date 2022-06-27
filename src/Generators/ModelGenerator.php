@@ -120,7 +120,7 @@ class ModelGenerator extends BaseGenerator
                 $templateData
             );
             $templateData = str_replace('$SOFT_DELETE$', infy_tab()."use SoftDeletes;\n", $templateData);
-            $deletedAtTimestamp = config('infyom.laravel_generator.timestamps.deleted_at', 'deleted_at');
+            $deletedAtTimestamp = config('albadrsystems.laravel_generator.timestamps.deleted_at', 'deleted_at');
             $templateData = str_replace(
                 '$SOFT_DELETE_DATES$',
                 infy_nl_tab()."protected \$dates = ['".$deletedAtTimestamp."'];\n",
@@ -285,8 +285,8 @@ class ModelGenerator extends BaseGenerator
 
     private function generateRules()
     {
-        $dont_require_fields = config('infyom.laravel_generator.options.hidden_fields', [])
-                + config('infyom.laravel_generator.options.excluded_fields', $this->excluded_fields);
+        $dont_require_fields = config('albadrsystems.laravel_generator.options.hidden_fields', [])
+                + config('albadrsystems.laravel_generator.options.excluded_fields', $this->excluded_fields);
 
         $rules = [];
 

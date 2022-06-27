@@ -184,7 +184,7 @@ class BaseCommand extends Command
 
     public function runMigration()
     {
-        $migrationPath = config('alBadrsystems.laravel_generator.path.migration', database_path('migrations/'));
+        $migrationPath = config('albadrsystems.laravel_generator.path.migration', database_path('migrations/'));
         $path = Str::after($migrationPath, base_path()); // get path after base_path
         $this->call('migrate', ['--path' => $path, '--force' => true]);
 
@@ -231,7 +231,7 @@ class BaseCommand extends Command
             ];
         }
 
-        $path = config('alBadrsystems.laravel_generator.path.schema_files', resource_path('model_schemas/'));
+        $path = config('albadrsystems.laravel_generator.path.schema_files', resource_path('model_schemas/'));
 
         $fileName = $this->commandData->modelName.'.json';
 
@@ -255,7 +255,7 @@ class BaseCommand extends Command
             $locales['fields'][$field->name] = Str::title(str_replace('_', ' ', $field->name));
         }
 
-        $path = config('alBadrsystems.laravel_generator.path.models_locale_files', base_path('resources/lang/en/models/'));
+        $path = config('albadrsystems.laravel_generator.path.models_locale_files', base_path('resources/lang/en/models/'));
 
         $fileName = $this->commandData->config->mCamelPlural.'.php';
 

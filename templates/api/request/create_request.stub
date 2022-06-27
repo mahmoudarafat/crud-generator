@@ -3,7 +3,7 @@
 namespace $NAMESPACE_API_REQUEST$;
 
 use $NAMESPACE_MODEL$\$MODEL_NAME$;
-use InfyOm\Generator\Request\APIRequest;
+use AlbadrSystems\Generator\Request\APIRequest;
 
 class Create$MODEL_NAME$APIRequest extends APIRequest
 {

@@ -13,7 +13,7 @@ class MigrationGeneratorCommand extends BaseCommand
      *
      * @var string
      */
-    protected $name = 'alBadrsystems:migration';
+    protected $name = 'albadrsystems:migration';
 
     /**
      * The console command description.

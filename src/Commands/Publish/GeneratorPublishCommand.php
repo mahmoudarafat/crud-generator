@@ -31,7 +31,7 @@ class GeneratorPublishCommand extends PublishBaseCommand
         $this->updateRouteServiceProvider();
         $this->publishTestCases();
         $this->publishBaseController();
-        $repositoryPattern = config('alBadrsystems.laravel_generator.options.repository_pattern', true);
+        $repositoryPattern = config('albadrsystems.laravel_generator.options.repository_pattern', true);
         if ($repositoryPattern) {
             $this->publishBaseRepository();
         }
@@ -49,8 +49,8 @@ class GeneratorPublishCommand extends PublishBaseCommand
      */
     private function fillTemplate($templateData)
     {
-        $apiVersion = config('alBadrsystems.laravel_generator.api_version', 'v1');
-        $apiPrefix = config('alBadrsystems.laravel_generator.api_prefix', 'api');
+        $apiVersion = config('albadrsystems.laravel_generator.api_version', 'v1');
+        $apiPrefix = config('albadrsystems.laravel_generator.api_prefix', 'api');
 
         $templateData = str_replace('$API_VERSION$', $apiVersion, $templateData);
         $templateData = str_replace('$API_PREFIX$', $apiPrefix, $templateData);
@@ -85,10 +85,10 @@ class GeneratorPublishCommand extends PublishBaseCommand
 
     private function publishTestCases()
     {
-        $testsPath = config('alBadrsystems.laravel_generator.path.tests', base_path('tests/'));
-        $testsNameSpace = config('alBadrsystems.laravel_generator.namespace.tests', 'Tests');
-        $createdAtField = config('alBadrsystems.laravel_generator.timestamps.created_at', 'created_at');
-        $updatedAtField = config('alBadrsystems.laravel_generator.timestamps.updated_at', 'updated_at');
+        $testsPath = config('albadrsystems.laravel_generator.path.tests', base_path('tests/'));
+        $testsNameSpace = config('albadrsystems.laravel_generator.namespace.tests', 'Tests');
+        $createdAtField = config('albadrsystems.laravel_generator.timestamps.created_at', 'created_at');
+        $updatedAtField = config('albadrsystems.laravel_generator.timestamps.updated_at', 'updated_at');
 
         $templateData = get_template('test.api_test_trait', 'crud-generator');
 
@@ -104,13 +104,13 @@ class GeneratorPublishCommand extends PublishBaseCommand
         FileUtil::createFile($testsPath, $fileName, $templateData);
         $this->info('ApiTestTrait created');
 
-        $testAPIsPath = config('alBadrsystems.laravel_generator.path.api_test', base_path('tests/APIs/'));
+        $testAPIsPath = config('albadrsystems.laravel_generator.path.api_test', base_path('tests/APIs/'));
         if (!file_exists($testAPIsPath)) {
             FileUtil::createDirectoryIfNotExist($testAPIsPath);
             $this->info('APIs Tests directory created');
         }
 
-        $testRepositoriesPath = config('alBadrsystems.laravel_generator.path.repository_test', base_path('tests/Repositories/'));
+        $testRepositoriesPath = config('albadrsystems.laravel_generator.path.repository_test', base_path('tests/Repositories/'));
         if (!file_exists($testRepositoriesPath)) {
             FileUtil::createDirectoryIfNotExist($testRepositoriesPath);
             $this->info('Repositories Tests directory created');

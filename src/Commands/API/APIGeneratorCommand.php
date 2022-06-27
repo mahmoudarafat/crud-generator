@@ -13,7 +13,7 @@ class APIGeneratorCommand extends BaseCommand
      *
      * @var string
      */
-    protected $name = 'alBadrsystems:api';
+    protected $name = 'albadrsystems:api';
 
     /**
      * The console command description.

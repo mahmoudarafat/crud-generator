@@ -151,16 +151,16 @@ class GeneratorConfig
         $this->nsFactory = config('albadrsystems.laravel_generator.namespace.factory', 'Database\Factories').$prefix;
         $this->nsDataTables = config('albadrsystems.laravel_generator.namespace.datatables', 'App\DataTables').$prefix;
         $this->nsModelExtend = config(
-            'infyom.laravel_generator.model_extend_class',
+            'albadrsystems.laravel_generator.model_extend_class',
             'Illuminate\Database\Eloquent\Model'
         );
 
         $this->nsApiController = config(
-            'infyom.laravel_generator.namespace.api_controller',
+            'albadrsystems.laravel_generator.namespace.api_controller',
             'App\Http\Controllers\API'
         ).$prefix;
         $this->nsApiResource = config(
-            'infyom.laravel_generator.namespace.api_resource',
+            'albadrsystems.laravel_generator.namespace.api_resource',
             'App\Http\Resources'
         ).$prefix;
         $this->nsApiRequest = config('albadrsystems.laravel_generator.namespace.api_request', 'App\Http\Requests\API').$prefix;
@@ -190,7 +190,7 @@ class GeneratorConfig
         }
 
         $this->pathRepository = config(
-            'infyom.laravel_generator.path.repository',
+            'albadrsystems.laravel_generator.path.repository',
             app_path('Repositories/')
         ).$prefix;
 
@@ -202,17 +202,17 @@ class GeneratorConfig
         $this->pathDataTables = config('albadrsystems.laravel_generator.path.datatables', app_path('DataTables/')).$prefix;
 
         $this->pathApiController = config(
-            'infyom.laravel_generator.path.api_controller',
+            'albadrsystems.laravel_generator.path.api_controller',
             app_path('Http/Controllers/API/')
         ).$prefix;
 
         $this->pathApiResource = config(
-            'infyom.laravel_generator.path.api_resource',
+            'albadrsystems.laravel_generator.path.api_resource',
             app_path('Http/Resources/')
         ).$prefix;
 
         $this->pathApiRequest = config(
-            'infyom.laravel_generator.path.api_request',
+            'albadrsystems.laravel_generator.path.api_request',
             app_path('Http/Requests/API/')
         ).$prefix;
 
@@ -221,7 +221,7 @@ class GeneratorConfig
         $this->pathApiTests = config('albadrsystems.laravel_generator.path.api_test', base_path('tests/APIs/'));
 
         $this->pathController = config(
-            'infyom.laravel_generator.path.controller',
+            'albadrsystems.laravel_generator.path.controller',
             app_path('Http/Controllers/')
         ).$prefix;
 
@@ -231,24 +231,24 @@ class GeneratorConfig
         $this->pathFactory = config('albadrsystems.laravel_generator.path.factory', database_path('factories/'));
 
         $this->pathViews = config(
-            'infyom.laravel_generator.path.views',
+            'albadrsystems.laravel_generator.path.views',
             resource_path('views/')
         ).$viewPrefix.$this->mSnakePlural.'/';
 
         $this->pathAssets = config(
-            'infyom.laravel_generator.path.assets',
+            'albadrsystems.laravel_generator.path.assets',
             resource_path('assets/')
         );
 
         $this->pathSeeder = config('albadrsystems.laravel_generator.path.seeder', database_path('seeders/'));
         $this->pathDatabaseSeeder = config('albadrsystems.laravel_generator.path.database_seeder', database_path('seeders/DatabaseSeeder.php'));
         $this->pathViewProvider = config(
-            'infyom.laravel_generator.path.view_provider',
+            'albadrsystems.laravel_generator.path.view_provider',
             app_path('Providers/ViewServiceProvider.php')
         );
 
         $this->modelJsPath = config(
-            'infyom.laravel_generator.path.modelsJs',
+            'albadrsystems.laravel_generator.path.modelsJs',
             resource_path('assets/js/models/')
         );
     }

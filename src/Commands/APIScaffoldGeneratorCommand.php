@@ -12,7 +12,7 @@ class APIScaffoldGeneratorCommand extends BaseCommand
      *
      * @var string
      */
-    protected $name = 'alBadrsystems:api_scaffold';
+    protected $name = 'albadrsystems:api_scaffold';
 
     /**
      * The console command description.
