@@ -114,7 +114,7 @@ class LayoutPublishCommand extends PublishBaseCommand
 
     private function publishHomeController()
     {
-        $templateData = get_template('home_controller', 'laravel-generator');
+        $templateData = get_template('home_controller', 'crud-generator');
 
         $templateData = $this->fillTemplate($templateData);
 

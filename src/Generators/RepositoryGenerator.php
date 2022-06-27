@@ -25,7 +25,7 @@ class RepositoryGenerator extends BaseGenerator
 
     public function generate()
     {
-        $templateData = get_template('repository', 'laravel-generator');
+        $templateData = get_template('repository', 'crud-generator');
 
         $templateData = fill_template($this->commandData->dynamicVars, $templateData);
 
@@ -39,7 +39,7 @@ class RepositoryGenerator extends BaseGenerator
 
         $templateData = str_replace('$FIELDS$', implode(','.infy_nl_tab(1, 2), $searchables), $templateData);
 
-        $docsTemplate = get_template('docs.repository', 'laravel-generator');
+        $docsTemplate = get_template('docs.repository', 'crud-generator');
         $docsTemplate = fill_template($this->commandData->dynamicVars, $docsTemplate);
         $docsTemplate = str_replace('$GENERATE_DATE$', date('F j, Y, g:i a T'), $docsTemplate);
 

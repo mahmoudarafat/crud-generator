@@ -44,7 +44,7 @@ class ModelGenerator extends BaseGenerator
 
     public function generate()
     {
-        $templateData = get_template('model.model', 'laravel-generator');
+        $templateData = get_template('model.model', 'crud-generator');
 
         $templateData = $this->fillTemplate($templateData);
 
@@ -154,7 +154,7 @@ class ModelGenerator extends BaseGenerator
             $templateData = $this->generateSwagger($templateData);
         }
 
-        $docsTemplate = get_template('docs.model', 'laravel-generator');
+        $docsTemplate = get_template('docs.model', 'crud-generator');
         $docsTemplate = fill_template($this->commandData->dynamicVars, $docsTemplate);
 
         $fillables = '';

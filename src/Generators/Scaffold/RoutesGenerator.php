@@ -25,9 +25,9 @@ class RoutesGenerator
         $this->path = $commandData->config->pathRoutes;
         $this->routeContents = file_get_contents($this->path);
         if (!empty($this->commandData->config->prefixes['route'])) {
-            $this->routesTemplate = get_template('scaffold.routes.prefix_routes', 'laravel-generator');
+            $this->routesTemplate = get_template('scaffold.routes.prefix_routes', 'crud-generator');
         } else {
-            $this->routesTemplate = get_template('scaffold.routes.routes', 'laravel-generator');
+            $this->routesTemplate = get_template('scaffold.routes.routes', 'crud-generator');
         }
         $this->routesTemplate = fill_template($this->commandData->dynamicVars, $this->routesTemplate);
     }

@@ -41,12 +41,12 @@ class ControllerGenerator extends BaseGenerator
                 $templateName .= '_locale';
             }
 
-            $templateData = get_template("scaffold.controller.$templateName", 'laravel-generator');
+            $templateData = get_template("scaffold.controller.$templateName", 'crud-generator');
 
             $this->generateDataTable();
         } elseif ($this->commandData->jqueryDT()) {
             $templateName = 'jquery_datatable_controller';
-            $templateData = get_template("scaffold.controller.$templateName", 'laravel-generator');
+            $templateData = get_template("scaffold.controller.$templateName", 'crud-generator');
 
             $this->generateDataTable();
         } else {
@@ -59,7 +59,7 @@ class ControllerGenerator extends BaseGenerator
                 $templateName .= '_locale';
             }
 
-            $templateData = get_template("scaffold.controller.$templateName", 'laravel-generator');
+            $templateData = get_template("scaffold.controller.$templateName", 'crud-generator');
 
             $paginate = $this->commandData->getOption('paginate');
 
@@ -85,7 +85,7 @@ class ControllerGenerator extends BaseGenerator
             $templateName .= '_locale';
         }
 
-        $templateData = get_template('scaffold.'.$templateName, 'laravel-generator');
+        $templateData = get_template('scaffold.'.$templateName, 'crud-generator');
 
         $templateData = fill_template($this->commandData->dynamicVars, $templateData);
 

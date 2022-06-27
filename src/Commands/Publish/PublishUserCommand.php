@@ -78,7 +78,7 @@ class PublishUserCommand extends PublishBaseCommand
 
         $routeContents = file_get_contents($path);
 
-        $routesTemplate = get_template('routes.user', 'laravel-generator');
+        $routesTemplate = get_template('routes.user', 'crud-generator');
 
         $routeContents .= "\n\n".$routesTemplate;
 
@@ -101,9 +101,9 @@ class PublishUserCommand extends PublishBaseCommand
 
     private function publishUserController()
     {
-        $templateData = get_template('user/user_controller', 'laravel-generator');
+        $templateData = get_template('user/user_controller', 'crud-generator');
         if (!config('alBadrsystems.laravel_generator.options.repository_pattern')) {
-            $templateData = get_template('user/user_controller_without_repository', 'laravel-generator');
+            $templateData = get_template('user/user_controller_without_repository', 'crud-generator');
             $templateData = $this->fillTemplate($templateData);
         }
 
@@ -124,7 +124,7 @@ class PublishUserCommand extends PublishBaseCommand
 
     private function publishUserRepository()
     {
-        $templateData = get_template('user/user_repository', 'laravel-generator');
+        $templateData = get_template('user/user_repository', 'crud-generator');
 
         $templateData = $this->fillTemplate($templateData);
 
@@ -145,7 +145,7 @@ class PublishUserCommand extends PublishBaseCommand
 
     private function publishCreateUserRequest()
     {
-        $templateData = get_template('user/create_user_request', 'laravel-generator');
+        $templateData = get_template('user/create_user_request', 'crud-generator');
 
         $templateData = $this->fillTemplate($templateData);
 
@@ -166,7 +166,7 @@ class PublishUserCommand extends PublishBaseCommand
 
     private function publishUpdateUserRequest()
     {
-        $templateData = get_template('user/update_user_request', 'laravel-generator');
+        $templateData = get_template('user/update_user_request', 'crud-generator');
 
         $templateData = $this->fillTemplate($templateData);
 

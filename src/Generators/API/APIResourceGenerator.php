@@ -26,7 +26,7 @@ class APIResourceGenerator extends BaseGenerator
 
     public function generate()
     {
-        $templateData = get_template('api.resource.api_resource', 'laravel-generator');
+        $templateData = get_template('api.resource.api_resource', 'crud-generator');
 
         $templateData = fill_template($this->commandData->dynamicVars, $templateData);
 

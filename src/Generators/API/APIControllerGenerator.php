@@ -40,7 +40,7 @@ class APIControllerGenerator extends BaseGenerator
             $templateName .= '_resource';
         }
 
-        $templateData = get_template("api.controller.$templateName", 'laravel-generator');
+        $templateData = get_template("api.controller.$templateName", 'crud-generator');
 
         $templateData = fill_template($this->commandData->dynamicVars, $templateData);
         $templateData = $this->fillDocs($templateData);
@@ -60,7 +60,7 @@ class APIControllerGenerator extends BaseGenerator
             $templateType = 'swagger-generator';
         } else {
             $templatePrefix = 'api.docs.controller';
-            $templateType = 'laravel-generator';
+            $templateType = 'crud-generator';
         }
 
         foreach ($methods as $method) {

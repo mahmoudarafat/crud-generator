@@ -37,7 +37,7 @@ class RequestGenerator extends BaseGenerator
 
     private function generateCreateRequest()
     {
-        $templateData = get_template('scaffold.request.create_request', 'laravel-generator');
+        $templateData = get_template('scaffold.request.create_request', 'crud-generator');
 
         $templateData = fill_template($this->commandData->dynamicVars, $templateData);
 
@@ -53,7 +53,7 @@ class RequestGenerator extends BaseGenerator
         $rules = $modelGenerator->generateUniqueRules();
         $this->commandData->addDynamicVariable('$UNIQUE_RULES$', $rules);
 
-        $templateData = get_template('scaffold.request.update_request', 'laravel-generator');
+        $templateData = get_template('scaffold.request.update_request', 'crud-generator');
 
         $templateData = fill_template($this->commandData->dynamicVars, $templateData);
 
