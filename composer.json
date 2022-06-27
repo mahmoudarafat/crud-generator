@@ -1,0 +1,65 @@
+{
+    "name": "albadrsystems/crud-generator",
+    "type": "library",
+    "description": "Al-Badr Laravel CRUD Generator",
+    "keywords": [
+        "laravel",
+        "api",
+        "model",
+        "request",
+        "migration",
+        "model",
+        "crud",
+        "repository",
+        "view",
+        "test",
+        "generator",
+        "swagger"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Al-Badr smart systemst",
+            "email": "info@albadrsystems.com"
+        },
+        {
+            "name": "Mahmoud Arafat",
+            "email": "mahmoudarafat33@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^9.0",
+        "illuminate/console": "^9.0",
+        "laracasts/flash": "^3.2",
+        "laravelcollective/html": "^6.3",
+        "doctrine/dbal": "^3.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5.10",
+        "mockery/mockery": "^1.4.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "AlBadrSystems\\Generator\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "\\AlBadrSystems\\Generator\\AlBadrSystemsGeneratorServiceProvider"
+            ]
+        }
+    },
+    
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
