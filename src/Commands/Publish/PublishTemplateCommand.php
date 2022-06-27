@@ -9,7 +9,7 @@ class PublishTemplateCommand extends PublishBaseCommand
      *
      * @var string
      */
-    protected $name = 'alBadrsystems.publish:templates';
+    protected $name = 'albadrsystems.publish:templates';
 
     /**
      * The console command description.
@@ -28,8 +28,8 @@ class PublishTemplateCommand extends PublishBaseCommand
     public function handle()
     {
         $this->templatesDir = config(
-            'alBadrsystems.laravel_generator.path.templates_dir',
-            resource_path('alBadrsystems/alBadrsystems-generator-templates/')
+            'albadrsystems.laravel_generator.path.templates_dir',
+            resource_path('albadrsystems/albadrsystems-generator-templates/')
         );
 
         if ($this->publishGeneratorTemplates()) {
@@ -45,7 +45,7 @@ class PublishTemplateCommand extends PublishBaseCommand
     {
         $templatesPath = __DIR__.'/../../../templates';
 
-        return $this->publishDirectory($templatesPath, $this->templatesDir, 'alBadrsystems-generator-templates');
+        return $this->publishDirectory($templatesPath, $this->templatesDir, 'albadrsystems-generator-templates');
     }
 
     /**
@@ -53,11 +53,11 @@ class PublishTemplateCommand extends PublishBaseCommand
      */
     public function publishScaffoldTemplates()
     {
-        $templateType = config('alBadrsystems.laravel_generator.templates', 'adminlte-templates');
+        $templateType = config('albadrsystems.laravel_generator.templates', 'stisla-templates');
 
         $templatesPath = get_templates_package_path($templateType).'/templates/scaffold';
 
-        return $this->publishDirectory($templatesPath, $this->templatesDir.'scaffold', 'alBadrsystems-generator-templates/scaffold', true);
+        return $this->publishDirectory($templatesPath, $this->templatesDir.'scaffold', 'albadrsystems-generator-templates/scaffold', true);
     }
 
     /**
@@ -65,7 +65,7 @@ class PublishTemplateCommand extends PublishBaseCommand
      */
     public function publishSwaggerTemplates()
     {
-        $templatesPath = base_path('vendor/alBadrsystems/swagger-generator/templates');
+        $templatesPath = base_path('vendor/albadrsystems/swagger-generator/templates');
 
         return $this->publishDirectory($templatesPath, $this->templatesDir, 'swagger-generator', true);
     }

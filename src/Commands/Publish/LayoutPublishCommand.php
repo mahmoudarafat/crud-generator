@@ -13,7 +13,7 @@ class LayoutPublishCommand extends PublishBaseCommand
      *
      * @var string
      */
-    protected $name = 'alBadrsystems.publish:layout';
+    protected $name = 'albadrsystems.publish:layout';
 
     /**
      * The console command description.
@@ -35,8 +35,8 @@ class LayoutPublishCommand extends PublishBaseCommand
 
     private function copyView()
     {
-        $viewsPath = config('alBadrsystems.laravel_generator.path.views', resource_path('views/'));
-        $templateType = config('alBadrsystems.laravel_generator.templates', 'adminlte-templates');
+        $viewsPath = config('albadrsystems.laravel_generator.path.views', resource_path('views/'));
+        $templateType = config('albadrsystems.laravel_generator.templates', 'stisla-templates');
 
         $this->createDirectories($viewsPath);
 
@@ -118,7 +118,7 @@ class LayoutPublishCommand extends PublishBaseCommand
 
         $templateData = $this->fillTemplate($templateData);
 
-        $controllerPath = config('alBadrsystems.laravel_generator.path.controller', app_path('Http/Controllers/'));
+        $controllerPath = config('albadrsystems.laravel_generator.path.controller', app_path('Http/Controllers/'));
 
         $fileName = 'HomeController.php';
 
@@ -142,13 +142,13 @@ class LayoutPublishCommand extends PublishBaseCommand
     {
         $templateData = str_replace(
             '$NAMESPACE_CONTROLLER$',
-            config('alBadrsystems.laravel_generator.namespace.controller'),
+            config('albadrsystems.laravel_generator.namespace.controller'),
             $templateData
         );
 
         $templateData = str_replace(
             '$NAMESPACE_REQUEST$',
-            config('alBadrsystems.laravel_generator.namespace.request'),
+            config('albadrsystems.laravel_generator.namespace.request'),
             $templateData
         );
 

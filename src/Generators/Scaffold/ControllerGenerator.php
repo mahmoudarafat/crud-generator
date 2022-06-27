@@ -24,7 +24,7 @@ class ControllerGenerator extends BaseGenerator
     {
         $this->commandData = $commandData;
         $this->path = $commandData->config->pathController;
-        $this->templateType = config('albadrsystems.laravel_generator.templates', 'adminlte-templates');
+        $this->templateType = config('albadrsystems.laravel_generator.templates', 'stisla-templates');
         $this->fileName = $this->commandData->modelName.'Controller.php';
     }
 

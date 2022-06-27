@@ -28,7 +28,7 @@ class ViewGenerator extends BaseGenerator
     {
         $this->commandData = $commandData;
         $this->path = $commandData->config->pathViews;
-        $this->templateType = config('albadrsystems.laravel_generator.templates', 'adminlte-templates');
+        $this->templateType = config('albadrsystems.laravel_generator.templates', 'stisla-templates');
     }
 
     public function generate()
