@@ -43,7 +43,7 @@ return [
 
         'schema_files'      => resource_path('model_schemas/'),
 
-        'templates_dir'     => resource_path('albadrsystems/albadrsystems-generator-templates/'),
+        'templates_dir'     => resource_path('infyom/infyom-generator-templates/'),
 
         'seeder'            => database_path('seeders/'),
 
@@ -132,13 +132,13 @@ return [
 
         'save_schema_file' => true,
 
-        'localized' => false,
+        'localized' => true,
 
-        'tables_searchable_default' => false,
+        'tables_searchable_default' => true,
 
-        'repository_pattern' => true,
+        'repository_pattern' => false,
 
-        'resources' => false,
+        'resources' => true,
 
         'excluded_fields' => ['id'], // Array of columns that doesn't required while creating module
     ],
