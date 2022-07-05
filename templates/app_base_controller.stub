@@ -2,7 +2,7 @@
 
 namespace $NAMESPACE_APP$\Http\Controllers;
 
-use AlbadrSystems\Generator\Utils\ResponseUtil;
+use AlBadrSystems\Generator\Utils\ResponseUtil;
 use Response;
 
 /**
