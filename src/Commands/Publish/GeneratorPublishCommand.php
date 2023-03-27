@@ -28,7 +28,7 @@ class GeneratorPublishCommand extends PublishBaseCommand
      */
     public function handle()
     {
-        $this->updateRouteServiceProvider();
+//         $this->updateRouteServiceProvider();
         $this->publishTestCases();
         $this->publishBaseController();
         $repositoryPattern = config('albadrsystems.laravel_generator.options.repository_pattern', true);
